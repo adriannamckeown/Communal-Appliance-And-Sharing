@@ -28,6 +28,9 @@ details.controller("detailsController", [ '$scope', '$http','$window','$mdDialog
               input.value = "Lender's Name: " +response.data.firstName+" "+response.data.lastName+" "+"\r\n"
 			  + "Lender's Address: " +response.data.streetAddress+"\r\n" + "Phone Number: " +response.data.phoneNo+" "+"\r\n" 
 			  + "Price: " +response.data.price_per_day+"\r\n" + "Available Dates: " +response.data.available_from_dt+" to "+response.data.available_to_dt;
+	    var button = document.createElement("input");
+            button.type = "button";
+            button.value = "Interested";
             para.appendChild(input);
             container.appendChild(para);
 		})
